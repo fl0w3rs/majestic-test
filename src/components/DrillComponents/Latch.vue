@@ -9,7 +9,7 @@ function getRandomNumberBetween(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-const random = getRandomNumberBetween(-4, 4);
+const random = getRandomNumberBetween(-2, 2);
 
 const progress = computed(() => props.progress / 100)
 const sign = computed(() => props.onTop ? -1 : 1);
