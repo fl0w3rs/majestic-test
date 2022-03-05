@@ -2,7 +2,8 @@
 import { computed } from 'vue';
 
 const props = defineProps({
-    progress: Number
+    progress: Number,
+    width: Number
 })
 
 function getRandomNumberBetween(min,max){
@@ -19,5 +20,5 @@ const style = computed(() => ({
 </script>
 
 <template>
-    <img src="src/assets/spring.png" width="35" :style='style'>
+    <img src="src/assets/spring.png" :width="width" :style='style'>
 </template>

@@ -2,7 +2,8 @@
 
 const props = defineProps({
     onTop: Boolean,
-    progress: Number
+    progress: Number,
+    width: Number
 })
 
 function getRandomNumberBetween(min,max){
@@ -20,5 +21,5 @@ const style = computed(() => ({
 </script>
 
 <template>
-    <img :src="onTop ? 'src/assets/latch.png' : 'src/assets/latch_bottom.png'" width="35" :style='style'>
+    <img :src="onTop ? 'src/assets/latch.png' : 'src/assets/latch_bottom.png'" :width="width" :style='style'>
 </template>

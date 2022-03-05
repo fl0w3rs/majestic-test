@@ -4,6 +4,9 @@ import { computed } from 'vue';
 const props = defineProps({
     heatPercentage: {
         type: Number
+    },
+    drillHeight: {
+        type: Number
     }
 });
 
@@ -26,7 +29,7 @@ const style = computed(
 <template>
     <div class="drill-image-container">
         <div class="drill-image-mask" :style="style"></div>
-        <img src="src/assets/drill.png" class="drill-image" />
+        <img src="src/assets/drill.png" :height="drillHeight" class="drill-image" />
     </div>
 </template>
 
