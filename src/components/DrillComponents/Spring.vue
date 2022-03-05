@@ -20,5 +20,5 @@ const style = computed(() => ({
 </script>
 
 <template>
-    <img src="src/assets/spring.png" :width="width" :style='style'>
+    <img src="src/assets/spring.svg" :width="width" :style='style'>
 </template>
