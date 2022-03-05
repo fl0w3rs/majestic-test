@@ -1,0 +1,16 @@
+.position-absolute {
+    position: absolute;
+}
+
+.position-relative {
+    position: relative;
+}
+
+body {
+    background-color: #121212;
+    color: #eeeeee;
+}
+
+* {
+    transition-duration: 1s;
+}
