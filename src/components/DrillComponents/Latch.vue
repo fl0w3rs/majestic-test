@@ -1,4 +1,6 @@
-<script setup>import { computed } from 'vue';
+<script setup>
+import { computed } from 'vue';
+import { getRandomNumberBetween } from '../../utils';
 
 const props = defineProps({
     onTop: Boolean,
@@ -6,18 +8,24 @@ const props = defineProps({
     width: Number
 })
 
-function getRandomNumberBetween(min,max){
-    return Math.floor(Math.random()*(max-min+1)+min);
-}
-
 const random = getRandomNumberBetween(-2, 2);
 
 const progress = computed(() => props.progress / 100)
 const sign = computed(() => props.onTop ? -1 : 1);
 
-const style = computed(() => ({
-    transform: (props.onTop ? `translate(0px, ${progress.value * 15 * -1}px)` : '') + ` rotate(${(props.onTop ? 0 : 180) + (progress.value * (3 + random) * sign.value)}deg)`
-}))
+const style = computed(() => {
+    const rotateAngle = (props.onTop ? 0 : 180) + (progress.value * (3 + random) * sign.value);
+
+    const style = {
+        transform: `rotate(${rotateAngle}deg)`
+    }
+
+    if(props.onTop) {
+        style.transform = `translate(0px, ${progress.value * 15 * -1}px) ` + style.transform;
+    }
+
+    return style;
+})
 </script>
 
 <template>

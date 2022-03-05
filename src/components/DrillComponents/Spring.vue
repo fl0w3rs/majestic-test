@@ -1,14 +1,11 @@
 <script setup>
 import { computed } from 'vue';
+import { getRandomNumberBetween } from '../../utils';
 
 const props = defineProps({
     progress: Number,
     width: Number
 })
-
-function getRandomNumberBetween(min,max){
-    return Math.floor(Math.random()*(max-min+1)+min);
-}
 
 const random = getRandomNumberBetween(-5, 5);
 
