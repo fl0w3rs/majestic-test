@@ -44,3 +44,15 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.of-hidden {
+    overflow: hidden
+}
