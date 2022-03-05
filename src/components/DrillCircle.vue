@@ -46,7 +46,7 @@ const drillStyle = computed(() => ({
             <spring :progress="movePercentageComputed" :width="0.08 * width" />
             <latch :onTop="true" :progress="movePercentageComputed" :width="0.08 * width" />
           </div>
-          <div class="align-center column" style="background-color: #7B7B7B; display: flex; justify-content: flex-start">
+          <div class="align-center column key-column-bg" style="display: flex; justify-content: flex-start">
             <latch :onTop="false" :progress="movePercentageComputed" :width="0.08 * width" />
           </div>
         </div>

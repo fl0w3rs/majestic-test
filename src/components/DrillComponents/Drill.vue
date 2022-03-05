@@ -34,19 +34,18 @@ const style = computed(
 </template>
 
 <style lang="scss">
-.drill-image-mask {
-    -webkit-mask: url(src/assets/drill.png) center/contain no-repeat;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+    .drill-image-mask {
+        -webkit-mask: url(src/assets/drill.png) center/contain no-repeat;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 
-.drill-image-container {
-    position: relative;
-    display: inline-block
-}
+    .drill-image-container {
+        position: relative;
+    }
 
-.drill-image {
-    display: block;
-}
+    .drill-image {
+        display: block;
+    }
 </style>
